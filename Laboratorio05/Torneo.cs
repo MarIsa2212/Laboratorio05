@@ -20,7 +20,7 @@ namespace Laboratorio05
             result[0] = copyArray(equipos, equipos.Length);
 
             int equiposR = equipos.Length;
-            int fase = 1;
+            int f = 1;
 
             while (equiposR > 1)
             {
@@ -33,9 +33,9 @@ namespace Laboratorio05
 
                 equiposR = equiposR / 2;
 
-                result[fase] = copyArray(equipos, equiposR);
+                result[f] = copyArray(equipos, equiposR);
 
-                fase++;
+                f++;
             }
 
             return result;
