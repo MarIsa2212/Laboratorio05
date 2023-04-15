@@ -18,7 +18,7 @@ namespace Laboratorio05
         public static Information GetInformation()
         {
             if (Instance == null)
-                Instance = new Information("", "", "");
+                Instance = new Information("María Isabel Martínez", "1068823", "04");
 
             return Instance;
         }
