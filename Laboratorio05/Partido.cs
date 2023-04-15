@@ -33,16 +33,16 @@ namespace Laboratorio05
             if (ganador != null)
                 return ganador;
 
-            double puntajeEquipo1, puntajeEquipo2;
+            double puntajeE1, puntajeE2;
 
             do
             {
-                puntajeEquipo1 = IRandomGenerator.RandomGenerator.Next() * (((equipo1.GetPartidosGanados() * 0.7) + (equipo1.GetPartidosPerdidos() * 0.1) + (equipo1.GetPartidosEmpatados() * 0.2)) / (equipo1.GetGolesFavor() - equipo1.GetGolesContra() + 0.001));
+                puntajeE1 = IRandomGenerator.RandomGenerator.Next() * (((equipo1.GetPartidosGanados() * 0.7) + (equipo1.GetPartidosPerdidos() * 0.1) + (equipo1.GetPartidosEmpatados() * 0.2)) / (equipo1.GetGolesFavor() - equipo1.GetGolesContra() + 0.001));
 
-                puntajeEquipo2 = IRandomGenerator.RandomGenerator.Next() * (((equipo2.GetPartidosGanados() * 0.7) + (equipo2.GetPartidosPerdidos() * 0.1) + (equipo2.GetPartidosEmpatados() * 0.2)) / (equipo2.GetGolesFavor() - equipo2.GetGolesContra() + 0.001));
-            } while (puntajeEquipo1 == puntajeEquipo2);
+                puntajeE2 = IRandomGenerator.RandomGenerator.Next() * (((equipo2.GetPartidosGanados() * 0.7) + (equipo2.GetPartidosPerdidos() * 0.1) + (equipo2.GetPartidosEmpatados() * 0.2)) / (equipo2.GetGolesFavor() - equipo2.GetGolesContra() + 0.001));
+            } while (puntajeE1 == puntajeE2);
 
-            if (puntajeEquipo1 > puntajeEquipo2)
+            if (puntajeE1 > puntajeE2)
                 ganador = equipo1;
             else
                 ganador = equipo2;
